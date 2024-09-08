@@ -1,5 +1,6 @@
 module alu_tb;
   localparam DATA_WIDTH = 3;
+  localparam NUM_COMBINATIONS = 2 ** (2 * DATA_WIDTH + 3);
   reg [2:0] sel;
   reg [DATA_WIDTH-1:0] in0, in1;
   wire signed [DATA_WIDTH*2:0] out;		
@@ -8,7 +9,7 @@ module alu_tb;
   alu DUT_1(out, sel, in0, in1);  // Instantiate ALU
 
   initial begin
-    for (int i = 0; i < 512; i = i + 1) begin 
+    for (int i = 0; i < NUM_COMBINATIONS; i = i + 1) begin 
       {sel, in0, in1} = i;        // Generate inputs
       #5;                         // Delay 5 nsec for propogation delay
       // Calculate expected result based on sel
