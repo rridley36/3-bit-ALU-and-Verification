@@ -1,6 +1,6 @@
 3-bit ALU and Verification
 
-This project implements and verifies a 3-bit Arithmetic Logic Unit (ALU) in Verilog. 
+This project implements and verifies a 3-bit Arithmetic Logic Unit (ALU) in SystemVerilog. 
 The ALU performs basic arithmetic and logical operations, such as addition, subtraction, multiplication, division, AND, OR, XOR, and modulo. 
 A Verilog testbench is also provided to verify the correctness of the ALU using an automated test suite.
 
